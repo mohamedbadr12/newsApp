@@ -84,18 +84,21 @@ class Search extends SearchDelegate {
           return Center(child: Text('Error: ${snapshot.error}'));
         } else if (snapshot.hasData) {
           return snapshot.data!.fold(
-            (failure) => Center(child: Text(failure)),
-            (newsModel) {
+                (failure) => Center(child: Text(failure)),
+                (newsModel) {
               final articles = newsModel.articles;
               if (articles.isEmpty) {
                 return const Center(child: Text('No Data Found'));
               }
               return GridView.builder(
+
                 itemCount: articles.length,
+
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   childAspectRatio: 0.6,
                   crossAxisCount: 2,
                   crossAxisSpacing: 10,
+
                   mainAxisSpacing: 10,
                 ),
                 itemBuilder: (context, index) {
