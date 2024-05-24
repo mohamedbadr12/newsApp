@@ -1,14 +1,13 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/core/utils/dependency_injection.dart';
-
 import 'core/app_router/app_router.dart';
 import 'core/app_router/route.dart';
 
 void main() {
   ServicesLocator.init();
   runApp(DevicePreview(
-    enabled: true,
+    enabled: false,
     builder: (context) => const NewsApp(),
   ));
 }
@@ -23,7 +22,7 @@ class NewsApp extends StatelessWidget {
         builder: DevicePreview.appBuilder,
         debugShowCheckedModeBanner: false,
         onGenerateRoute: AppRouter.generateRoute,
-        initialRoute: Routes.category,
+        initialRoute: Routes.onBoarding,
         theme:
             ThemeData.dark().copyWith(scaffoldBackgroundColor: Colors.black));
   }

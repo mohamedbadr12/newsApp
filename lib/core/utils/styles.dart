@@ -51,6 +51,13 @@ abstract class Styles {
         fontWeight: FontWeight.w700,
       );
 
+  static TextStyle textStyle16SemiBold(context) => TextStyle(
+        fontSize: getResponsiveFontSize(context, fontSize: 16),
+        fontFamily: 'Poppins',
+        color: Colors.white,
+        fontWeight: FontWeight.w600,
+      );
+
   static TextStyle textStyle24Bold(context) => TextStyle(
         fontSize: getResponsiveFontSize(context, fontSize: 24),
         fontFamily: 'Poppins',

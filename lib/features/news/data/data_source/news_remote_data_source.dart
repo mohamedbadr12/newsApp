@@ -8,12 +8,16 @@ class NewsRemoteDataSource {
   NewsRemoteDataSource(this._api);
 
   Future<dynamic> getNewsSearch(String search) async {
-    final response = await _api.get(EndPoint.newsEverything(search));
+    final response = await _api.get(
+      EndPoint.newsEverything(search),
+    );
     return response;
   }
 
   Future<dynamic> getNewsEverything(String searchEverything) async {
-    final response = await _api.get(EndPoint.newsEverything(searchEverything));
+    final response = await _api.get(
+      EndPoint.newsEverything(searchEverything),
+    );
     return response;
   }
 }

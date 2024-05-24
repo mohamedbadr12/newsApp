@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/app_router/route.dart';
+import '../../../../../core/utils/styles.dart';
+
 class CustomContainerGetStarted extends StatelessWidget {
   const CustomContainerGetStarted({
     super.key,
@@ -12,9 +15,13 @@ class CustomContainerGetStarted extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        con.nextPage(
-            duration: const Duration(milliseconds: 500),
-            curve: Curves.easeInOut);
+        if (con.page == 2) {
+          Navigator.pushNamed(context, Routes.category);
+        } else {
+          con.nextPage(
+              duration: const Duration(milliseconds: 500),
+              curve: Curves.easeInOut);
+        }
       },
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
@@ -39,15 +46,7 @@ class CustomContainerGetStarted extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            const Text(
-              'Get Started',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-                fontFamily: 'Poppins',
-                fontWeight: FontWeight.w600,
-              ),
-            ),
+            Text('Get Started', style: Styles.textStyle16SemiBold(context)),
             const SizedBox(
               width: 10,
             ),
