@@ -18,19 +18,26 @@ dependencies:
   flutter_bloc: ^8.1.5
   dio: ^5.4.3+1
   shared_preferences: ^2.2.3
+  get_it: ^7.6.0
   dartz: ^0.10.1
-  get_it: ^7.7.0
   equatable: ^2.0.5
   flutter_svg: ^2.0.10+1
   device_preview: ^1.1.0
   timeago: ^3.6.1
-  flutter_native_splash: ^2.4.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_native_splash: ^2.3.0
+  flutter_launcher_icons: ^0.13.1
 
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/newss.jpg"
 
+  
+  
   flutter_lints: ^4.0.0
 
 flutter:
