@@ -18,12 +18,13 @@ class NewsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
         locale: DevicePreview.locale(context),
         builder: DevicePreview.appBuilder,
         debugShowCheckedModeBanner: false,
         onGenerateRoute: AppRouter.generateRoute,
         initialRoute: Routes.onBoarding,
         theme:
-            ThemeData.dark().copyWith(scaffoldBackgroundColor: Colors.black));
+        ThemeData.dark().copyWith(scaffoldBackgroundColor: Colors.black));
   }
 }
